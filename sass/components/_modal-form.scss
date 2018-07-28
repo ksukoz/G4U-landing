@@ -76,12 +76,20 @@
   width: 70%;
   box-shadow: none;
 
+  &#modal2 {
+    & .modal-content > .row {
+      margin-bottom: 0;
+    }
+  }
+
   .modal-content {
     width: 85%;
     margin: 0 auto;
     padding: 0;
-    height: 89vh;
-    overflow: scroll;
+    height: auto;
+    max-height: 84vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
     background-color: transparent;
 
     &::-webkit-scrollbar {

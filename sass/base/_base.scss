@@ -3,10 +3,10 @@ html {
   background-color: $color__white;
 
   @include respond(tab-land) {
-    font-size: 50%; //8px
+    font-size: 43.75%; //8px
   }
 
   @include respond(tab-port) {
-    font-size: 56.25%; //9px
+    font-size: 50%; //9px
   }
 }

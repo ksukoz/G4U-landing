@@ -45,6 +45,10 @@
       border-bottom-right-radius: 0;
       border-bottom: none;
 
+      @include respond(tab-port) {
+        border-bottom-right-radius: 25px;
+      }
+
       .collection-header {
         border-bottom: none !important;
       }
@@ -52,12 +56,20 @@
 
     &--bottom {
       border-top-left-radius: 0;
+
+      @include respond(tab-port) {
+        border-top-left-radius: 25px;
+      }
     }
 
     &-wrap {
       display: flex;
       align-items: stretch;
       margin-bottom: 0;
+
+      @include respond(tab-port) {
+        display: block;
+      }
 
       .m6 {
         padding: 0;
