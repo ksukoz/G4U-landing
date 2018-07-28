@@ -298,7 +298,8 @@ body {
     .main-footer__socials a:hover, .main-footer__socials a:active, .main-footer__socials a:focus {
       opacity: 0.9; }
   .main-footer .main-footer__copyright {
-    color: #000; }
+    color: #000;
+    padding-bottom: 5rem; }
     .main-footer .main-footer__copyright a {
       color: #000;
       transition: 0.3s; }
