@@ -17,6 +17,9 @@
       <div class="container">
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo">Logo</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
           <ul class="right hide-on-med-and-down">
             <li>
               <a class="navigation__link" href="#">Главная</a>
@@ -36,8 +39,31 @@
     </nav>
   </div>
 
-  <header class="main-header">
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <a class="navigation__link" href="#">Главная</a>
+    </li>
+    <li>
+      <a class="navigation__link" href="#">О турнире</a>
+    </li>
+    <li>
+      <a class="navigation__link" href="#">О G4U</a>
+    </li>
+    <li>
+      <a class="navigation__link" href="#">Зарегистрироваться</a>
+    </li>
+  </ul>
 
+  <header class="main-header">
+    <div class="container valign-wrapper main-header__wrap">
+      <div class="row">
+        <div class="col s9">
+          <h1 class="heading--primary">Комфортная игра на лучших полях вашего города</h1>
+          <p>Футбольный турнир G4U (Game for You) это бескомпромисное качество игры с лучшими игроками Украины и внушительным
+            призовым фондом.</p>
+        </div>
+      </div>
+    </div>
   </header>
 
   <footer class="page-footer main-footer">
@@ -75,6 +101,7 @@
   </footer>
 
   <script src="js/materialize.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
