@@ -14,23 +14,32 @@ body {
 .heading--primary {
   font-size: 6rem;
   margin-top: 0; }
+  @media (max-width: 56.25em) {
+    .heading--primary {
+      font-size: 4rem; } }
 
 .main-header {
   height: 100vh;
   background-image: url(../img/bg_header.png);
   background-size: cover;
+  background-position: top center;
   margin-top: -8rem;
   padding-top: 8rem;
   font-size: 2.4rem;
   color: #fff; }
+  @media (max-width: 56.25em) {
+    .main-header {
+      height: max-content; } }
   .main-header__wrap {
     height: 100%; }
 
 .navigation {
   height: 8rem; }
   .navigation__nav {
+    background-color: transparent;
     height: 8rem;
-    box-shadow: none; }
+    box-shadow: none;
+    transition: 0.3s; }
   .navigation__link {
     font-size: 2.4rem; }
     .navigation__link:hover {
