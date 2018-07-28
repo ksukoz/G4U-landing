@@ -1,0 +1,16 @@
+.navigation {
+  height: 8rem;
+
+  &__nav {
+    height: 8rem;
+    box-shadow: none;
+  }
+
+  &__link {
+    font-size: 2.4rem;
+
+    &:hover {
+      background-color: rgba($color__black, 0.4);
+    }
+  }
+}
