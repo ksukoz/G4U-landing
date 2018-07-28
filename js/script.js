@@ -1,11 +1,11 @@
-// document.addEventListener("DOMContentLoaded", function() {
-//   var elems = document.querySelectorAll(".sidenav");
-//   var tabs = document.querySelectorAll(".tabs");
-//   var instances = M.Sidenav.init(elems);
-//   var instance = M.Tabs.init(tabs);
-// });
-
 M.AutoInit();
+
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".sidenav");
+  var tabs = document.querySelector(".modal__tabs");
+  var instances = M.Sidenav.init(elems);
+  var instance = M.Tabs.init(tabs, { swipeable: true });
+});
 
 (function() {
   document.addEventListener("scroll", function() {

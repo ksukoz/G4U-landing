@@ -17,5 +17,19 @@
       background-color: transparent !important;
       box-shadow: 0 5px 1rem rgba($color__black, 0.5);
     }
+
+    &--green {
+      background-color: $color__primary;
+      color: $color__white;
+      padding: 1.5rem 2rem;
+      margin-bottom: 5rem;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: darken($color__primary, 10) !important;
+        box-shadow: 0 5px 1rem rgba($color__black, 0.5);
+      }
+    }
   }
 }
