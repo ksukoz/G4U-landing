@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%; //10px
+  background-color: $color__white;
 
   @include respond(tab-land) {
     font-size: 50%; //8px
