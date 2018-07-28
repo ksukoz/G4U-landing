@@ -120,6 +120,9 @@ body {
   background-position: top center;
   font-size: 2.4rem;
   color: #fff; }
+  @media (max-width: 56.25em) {
+    .about {
+      height: max-content; } }
   .about .container {
     height: 100%; }
 
@@ -150,3 +153,48 @@ body {
     height: 8rem; }
     .navigation__link:hover {
       background-color: rgba(0, 0, 0, 0.4); }
+
+.main-footer {
+  color: #000;
+  font-size: 2.1rem;
+  font-weight: 500;
+  padding-top: 3rem; }
+  .main-footer .row {
+    display: flex; }
+    @media (max-width: 75em) {
+      .main-footer .row {
+        display: block; } }
+  @media (max-width: 75em) {
+    .main-footer__address {
+      width: 100%;
+      text-align: center; } }
+  .main-footer__address address {
+    font-style: normal; }
+  .main-footer__contacts {
+    width: 100%; }
+    @media (max-width: 75em) {
+      .main-footer__contacts {
+        text-align: center; } }
+    .main-footer__contacts .row {
+      margin-bottom: 0; }
+    .main-footer__contacts a {
+      color: #000;
+      transition: 0.3s; }
+      .main-footer__contacts a:hover {
+        opacity: 0.9; }
+  .main-footer__socials .row {
+    margin-bottom: 0; }
+  .main-footer__socials img {
+    width: 5rem;
+    text-align: center; }
+  .main-footer__socials a {
+    transition: 0.3s; }
+    .main-footer__socials a:hover, .main-footer__socials a:active, .main-footer__socials a:focus {
+      opacity: 0.9; }
+  .main-footer .main-footer__copyright {
+    color: #000; }
+    .main-footer .main-footer__copyright a {
+      color: #000;
+      transition: 0.3s; }
+      .main-footer .main-footer__copyright a:hover, .main-footer .main-footer__copyright a:active, .main-footer .main-footer__copyright a:focus {
+        opacity: 0.9; }

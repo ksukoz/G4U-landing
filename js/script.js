@@ -1,9 +1,11 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var elems = document.querySelectorAll(".sidenav");
-  var tabs = document.querySelectorAll(".tabs");
-  var instances = M.Sidenav.init(elems);
-  var instance = M.Tabs.init(tabs);
-});
+// document.addEventListener("DOMContentLoaded", function() {
+//   var elems = document.querySelectorAll(".sidenav");
+//   var tabs = document.querySelectorAll(".tabs");
+//   var instances = M.Sidenav.init(elems);
+//   var instance = M.Tabs.init(tabs);
+// });
+
+M.AutoInit();
 
 (function() {
   document.addEventListener("scroll", function() {
