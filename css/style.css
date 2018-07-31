@@ -27,85 +27,113 @@ body {
 .heading-tertiary {
   font-size: 3rem;
   font-weight: 500;
-  color: #339933;
-  padding-top: 5rem;
-  margin-bottom: 5rem; }
+  color: #fff; }
 
 .heading-forth {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 3rem; }
 
-.tournaments {
-  font-size: 2.4rem;
-  padding: 5rem 0; }
-  .tournaments__wrap {
-    margin-bottom: 5rem; }
-  .tournaments .tabs a {
-    color: rgba(0, 0, 0, 0.7);
-    text-transform: none;
-    font-size: 1.8rem;
-    transition: 0.2s; }
-    .tournaments .tabs a span {
+.leagues__panels-wrap {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden; }
+
+.leagues__panel {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 1;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  color: #fff;
+  text-align: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center; }
+  .leagues__panel.open {
+    flex: 5; }
+    .leagues__panel.open .leagues__heading-text {
+      display: none; }
+  .leagues__panel--1 {
+    background-image: url(../img/panel--1.png); }
+    .leagues__panel--1 .leagues__panel-text {
+      transform: translateX(-100%); }
+    .leagues__panel--1.open .leagues__panel-text {
+      transform: translateX(0%); }
+  .leagues__panel--2 {
+    background-image: url(../img/panel--2.png); }
+    .leagues__panel--2 .leagues__panel-text {
+      transform: translateX(100%); }
+    .leagues__panel--2.open .leagues__panel-text {
+      transform: translateX(0%); }
+  .leagues__panel > * {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    transition: transform 0.5s;
+    align-items: center;
+    justify-content: center; }
+  .leagues__panel-text {
+    flex-wrap: wrap;
+    text-align-last: left;
+    padding: 0 5rem;
+    transition: 1s; }
+    .leagues__panel-text p {
       display: block;
-      min-width: 50px;
-      padding: 1rem 1.5rem;
-      line-height: 1;
-      border-radius: 25px;
-      border: 1px solid rgba(0, 0, 0, 0.7); }
-    .tournaments .tabs a:hover, .tournaments .tabs a.active {
-      color: #339933; }
-      .tournaments .tabs a:hover span, .tournaments .tabs a.active span {
-        border: 1px solid #339933; }
-    .tournaments .tabs a:focus {
-      background-color: transparent !important; }
-  .tournaments__collection {
-    margin-bottom: 0;
-    border-radius: 25px; }
-    .tournaments__collection--top {
-      border-bottom-right-radius: 0;
-      border-bottom: none; }
-      @media (max-width: 56.25em) {
-        .tournaments__collection--top {
-          border-bottom-right-radius: 25px; } }
-      .tournaments__collection--top .collection-header {
-        border-bottom: none !important; }
-    .tournaments__collection--bottom {
-      border-top-left-radius: 0; }
-      @media (max-width: 56.25em) {
-        .tournaments__collection--bottom {
-          border-top-left-radius: 25px; } }
-    .tournaments__collection-wrap {
-      display: flex;
-      align-items: stretch;
-      margin-bottom: 0; }
-      @media (max-width: 56.25em) {
-        .tournaments__collection-wrap {
-          display: block; } }
-      .tournaments__collection-wrap .m6 {
-        padding: 0; }
-      .tournaments__collection-wrap:last-child {
-        margin-top: -6.5rem; }
-    .tournaments__collection .avatar {
-      padding: 1.5rem 2rem !important;
-      min-height: 1rem !important;
-      height: auto; }
-    .tournaments__collection span {
-      display: inline-block;
-      padding: 1.5rem; }
-  .tournaments__icon {
-    border: 1px solid #339933;
-    border-radius: 50%;
-    color: #339933; }
-  .tournaments__desc:last-child {
-    padding-left: 3rem; }
-  .tournaments .collection-header {
-    background-color: #339933 !important;
-    color: #fff; }
-    .tournaments .collection-header span {
-      padding: 0 !important; }
-  .tournaments .indicator {
-    display: none; }
+      width: 100%; }
+  .leagues__panel-lists {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.8rem; }
+  .leagues__panel-list {
+    width: 50%; }
+  .leagues__panel-text {
+    font-size: 1.8rem; }
+
+.leagues__heading {
+  flex-direction: column;
+  transition: height 1s;
+  padding-top: 8rem; }
+  .leagues__heading-text {
+    font-size: 2.4rem;
+    width: 40%;
+    text-align: right; }
+  .leagues__heading--left {
+    align-items: flex-end;
+    padding-right: 8rem; }
+  .leagues__heading--right {
+    align-items: flex-start;
+    padding-left: 8rem; }
+    .leagues__heading--right .leagues__heading-text {
+      text-align: left; }
+
+.leagues__check {
+  position: relative;
+  padding-left: 35px; }
+  .leagues__check::before, .leagues__check::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px; }
+  .leagues__check::before {
+    top: -4px;
+    left: -5px;
+    width: 12px;
+    height: 22px;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(40deg);
+    backface-visibility: hidden;
+    transform-origin: 100% 100%; }
+  .leagues__check--green::before {
+    border-right: 2px solid #339933;
+    border-bottom: 2px solid #339933; }
 
 .btn__custom {
   display: block;
@@ -251,7 +279,10 @@ body {
 .forms {
   font-size: 3rem;
   text-align: center;
-  padding: 5rem 0; }
+  padding: 5rem 0;
+  background-image: url("../img/forms_bg.png");
+  background-size: cover;
+  background-position: center; }
 
 .main-header {
   height: 100vh;

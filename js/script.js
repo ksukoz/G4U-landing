@@ -8,6 +8,35 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 (function() {
+  const panels = document.querySelectorAll(".leagues__panel");
+
+  function toggleOpen() {
+    this.classList.toggle("open");
+    this.classList.contains("open")
+      ? panels.forEach(panel => {
+          panel.querySelector(".leagues__heading-text").style.display = "none";
+        })
+      : panels.forEach(panel => {
+          panel.querySelector(".leagues__heading-text").style.display =
+            "inline";
+        });
+  }
+
+  function toggleActive(e) {
+    if (e.propertyName.includes("flex")) {
+      this.classList.toggle("open--active");
+    }
+
+    console.log(e.propertyName);
+  }
+
+  panels.forEach(panel => {
+    panel.addEventListener("click", toggleOpen);
+  });
+  panels.forEach(panel =>
+    panel.addEventListener("transitionend", toggleActive)
+  );
+
   document.addEventListener("scroll", function() {
     var nav = document.querySelector(".navigation__nav");
     window.scrollY > 10
