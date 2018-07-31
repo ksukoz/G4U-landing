@@ -117,9 +117,11 @@ body {
   font-size: 3rem;
   padding: 1.5rem 0;
   height: auto;
-  transition: 0.3s; }
+  transition: 0.3s;
+  margin: 2rem 0; }
   .btn__custom:hover, .btn__custom:focus, .btn__custom:active {
-    background-color: transparent !important;
+    background-color: #339933;
+    color: #fff;
     box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.5); }
   .btn__custom--green {
     background-color: #339933;
@@ -245,6 +247,11 @@ body {
     right: 2rem;
     z-index: 1005; }
 
+.forms {
+  font-size: 3rem;
+  text-align: center;
+  padding: 5rem 0; }
+
 .main-header {
   height: 100vh;
   background-image: url(../img/bg_header.png);
@@ -274,7 +281,8 @@ body {
       background-color: rgba(0, 0, 0, 0.4); }
 
 .main-footer {
-  color: #000;
+  color: #fff;
+  background-color: #000;
   font-size: 2.1rem;
   font-weight: 500;
   padding-top: 3rem; }
@@ -311,10 +319,11 @@ body {
     .main-footer__socials a:hover, .main-footer__socials a:active, .main-footer__socials a:focus {
       opacity: 0.9; }
   .main-footer .main-footer__copyright {
-    color: #000;
+    color: #fff;
+    background-color: #000;
     padding-bottom: 5rem; }
     .main-footer .main-footer__copyright a {
-      color: #000;
+      color: #fff;
       transition: 0.3s; }
       .main-footer .main-footer__copyright a:hover, .main-footer .main-footer__copyright a:active, .main-footer .main-footer__copyright a:focus {
         opacity: 0.9; }

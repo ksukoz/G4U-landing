@@ -1,5 +1,6 @@
 .main-footer {
-  color: $color__black;
+  color: $color__white;
+  background-color: $color__black;
   font-size: 2.1rem;
   font-weight: 500;
   padding-top: 3rem;
@@ -63,11 +64,12 @@
   }
 
   & &__copyright {
-    color: $color__black;
+    color: $color__white;
+    background-color: $color__black;
     padding-bottom: 5rem;
 
     a {
-      color: $color__black;
+      color: $color__white;
       transition: 0.3s;
 
       &:hover,
