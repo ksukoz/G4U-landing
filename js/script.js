@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
     if (e.propertyName.includes("flex")) {
       this.classList.toggle("open--active");
     }
-
-    console.log(e.propertyName);
   }
 
   panels.forEach(panel => {
