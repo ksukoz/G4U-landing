@@ -312,6 +312,8 @@ body {
     height: 8rem; }
     .navigation__link:hover {
       background-color: rgba(0, 0, 0, 0.4); }
+  .navigation .brand-logo img {
+    width: 79px; }
 
 .main-footer {
   color: #fff;

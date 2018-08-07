@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>G4U</title>
+  <title>MG4U</title>
   <link rel="stylesheet" href="css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -16,7 +16,9 @@
     <nav class="navigation__nav">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="#!" class="brand-logo">Logo</a>
+          <a href="#!" class="brand-logo">
+            <img src="/img/logo.svg" alt="">
+          </a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
             <i class="material-icons">menu</i>
           </a>
@@ -28,10 +30,10 @@
               <a class="navigation__link" href="#tournaments">Про турнір</a>
             </li>
             <li>
-              <a class="navigation__link" href="#about">Про G4U</a>
+              <a class="navigation__link" href="#about">Про MG4U</a>
             </li>
             <li>
-              <a class="navigation__link" href="#">Зареєструватися</a>
+              <a class="navigation__link modal-trigger" href="#modal1">Вступити до ліги</a>
             </li>
           </ul>
         </div>
@@ -47,7 +49,7 @@
       <a class="navigation__link" href="#">Про турнір</a>
     </li>
     <li>
-      <a class="navigation__link" href="#">Про G4U</a>
+      <a class="navigation__link" href="#">Про MG4U</a>
     </li>
     <li>
       <a class="navigation__link" href="#">Зареєструватися</a>
@@ -116,7 +118,7 @@
       </div>
     </section>
 
-    <section class="leagues">
+    <section class="leagues scrollspy" id="tournaments">
       <div class="leagues__panels">
         <div class="leagues__panels-wrap">
           <div class="leagues__panel leagues__panel--1">
@@ -163,12 +165,11 @@
               <p class="leagues__heading-text">Покращуй показники і стань чемпіоном України в Amateur league</p>
             </div>
             <div class="leagues__panel-text">
-              <p>Amateur - формат аматорского футбола от G4U , где в призовом фонде лежит сумма с пятью нулями. Не аргумент?
-                А если мы тебе скажем , что у нас есть своя Лига Чемпионов и в ходе сезона будут доступны Лиги Федераций?
-                Ты и твоя команда можете стать “Барселоной” и “Манчестером” аматорского футбола , да еще и выграть 100000!
-                Обращайся и мы поможем найти команду либо можешь заявить свою!</p>
-              <p>Также будут доступны необходимые опции для продвижения по турнирной сетке: </p>
-
+              <p>Amateur - формат аматорського футболу від MG4U, де в призовому фонді лежить сума з п'ятьма нулями. Чи не аргумент?
+                А якщо ми тобі скажемо, що у нас є своя Ліга Чемпіонів і в ході сезону будуть доступні Ліги Федерацій? Ти
+                і твоя команда можете стати "Барселоною" і "Манчестером" аматорського футболу, та ще й виграти 100000! Звертайся
+                і ми допоможемо знайти команду або можеш заявити свою!</p>
+              <p>Також будуть доступні необхідні опції для просування по турнірній сітці:</p>
               <div class="leagues__panel-lists">
                 <ul class="leagues__panel-list">
                   <li class="leagues__check leagues__check--green">Фото та відео зйомка кожної гри</li>
@@ -206,13 +207,13 @@
           </div>
 
           <div class="col s12 m4">
-            <a href="#modal1" class="btn btn__custom waves-effect waves-default  modal-trigger">Найти комманду</a>
+            <a href="#modal1" class="btn btn__custom waves-effect waves-default  modal-trigger">Знайти команду</a>
           </div>
           <div class="col s12 m4">
-            <a href="#modal1" class="btn btn__custom waves-effect waves-default  modal-trigger">Заявить комманду</a>
+            <a href="#modal1" class="btn btn__custom waves-effect waves-default  modal-trigger">Заявити команду</a>
           </div>
           <div class="col s12 m4">
-            <a href="#modal2" class="btn btn__custom waves-effect waves-default  modal-trigger">Открыть лигу</a>
+            <a href="#modal2" class="btn btn__custom waves-effect waves-default  modal-trigger">Відкрити лігу</a>
           </div>
         </div>
       </div>
@@ -241,7 +242,7 @@
         </div>
         <div class="col s12 l3 offset-l1">
           <div class="main-footer__socials">
-            <div class="row">
+            <!-- <div class="row">
               <div class="col s4 center-align">
                 <a href="//">
                   <img src="img/instagram-logo.svg" alt="Instagram">
@@ -257,14 +258,14 @@
                   <img src="img/facebook-logo-button.svg" alt="Facebook">
                 </a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
     </div>
     <div class="footer-copyright main-footer__copyright">
       <div class="container center-align">
-        Разработано:
+        Розроблено:
         <a href="//notyteam.com.ua/">Skvader&NotyTeam</a>
       </div>
     </div>
@@ -279,10 +280,10 @@
         <div class="col s12 modal__tabs-wrap">
           <ul class="tabs">
             <li class="tab col s6">
-              <a class="active" href="#list1">Найти команду</a>
+              <a class="active" href="#list1">Знайти команду</a>
             </li>
             <li class="tab col s6">
-              <a href="#list2">Заявить команду</a>
+              <a href="#list2">Заявити команду</a>
             </li>
           </ul>
         </div>
@@ -290,15 +291,15 @@
           <form class="modal-form">
             <div class="input-field col s12">
               <select>
-                <option value="" disabled selected>Выберите город</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option value="" disabled selected>Оберіть місто</option>
+                <option value="1">Київ</option>
+                <option value="2">Суми</option>
+                <option value="3">Ірпень</option>
               </select>
             </div>
 
             <fieldset>
-              <legend>Откуда узнали о G4U?</legend>
+              <legend>Звідки дізналися про MG4U?</legend>
               <p>
                 <label>
                   <input type="checkbox" name="how__know" value="vk" />
@@ -320,29 +321,29 @@
               <p>
                 <label>
                   <input type="checkbox" name="how__know" value="friends" />
-                  <span>Друзья</span>
+                  <span>Друзі</span>
                 </label>
               </p>
               <p>
                 <label>
                   <input type="checkbox" name="how__know" value="other" />
-                  <span>Другое</span>
+                  <span>Інше</span>
                 </label>
               </p>
-              <div class="row">
+              <!-- <div class="row">
                 <div class="input-field col s12">
                   <input id="your__variant" type="text" class="validate">
-                  <label for="your__variant">Ваш вариант</label>
+                  <label for="your__variant">Ваш варіант</label>
                 </div>
-              </div>
+              </div> -->
             </fieldset>
 
             <fieldset>
-              <legend>Где то участвовали/тренировались ранее?</legend>
+              <legend>Десь грали раніше?</legend>
               <div class="row">
                 <div class="input-field col s12">
                   <input id="experience" type="text" class="validate">
-                  <label for="experience">Ваш ответ</label>
+                  <label for="experience">Ваша відповідь</label>
                 </div>
               </div>
             </fieldset>
@@ -351,38 +352,38 @@
               <div class="row">
                 <div class="input-field col s12">
                   <input id="name" type="text">
-                  <label for="name" class="colored">Имя</label>
+                  <label for="name" class="colored">Ім'я</label>
                 </div>
                 <div class="input-field col s12">
                   <input id="phone" type="tel">
-                  <label for="phone" class="colored">Номер телефона</label>
+                  <label for="phone" class="colored">Номер телефону</label>
                 </div>
                 <div class="input-field col s12">
                   <input id="age" type="number">
-                  <label for="age" class="colored">Возраст</label>
+                  <label for="age" class="colored">Вік</label>
                 </div>
                 <div class="input-field col s12">
                   <input id="position" type="tel" class="validate">
-                  <label for="position" class="colored">Игровая позиция</label>
+                  <label for="position" class="colored">Позиція на полі</label>
                 </div>
               </div>
             </fieldset>
-            <input class="btn btn__custom btn__custom--green" type="submit" value="Найти команду">
+            <input class="btn btn__custom btn__custom--green" type="submit" value="Знайти команду">
           </form>
         </div>
         <div id="list2" class="col s12">
           <form class="modal-form">
             <div class="input-field col s12">
               <select>
-                <option value="" disabled selected>Выберите город</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option value="" disabled selected>Оберіть місто</option>
+                <option value="1">Київ</option>
+                <option value="2">Суми</option>
+                <option value="3">Ірпень</option>
               </select>
             </div>
 
             <fieldset>
-              <legend>Откуда узнали о G4U?</legend>
+              <legend>Звідки дізналися про MG4U?</legend>
               <p>
                 <label>
                   <input type="checkbox" name="how__know" value="vk" />
@@ -404,29 +405,29 @@
               <p>
                 <label>
                   <input type="checkbox" name="how__know" value="friends" />
-                  <span>Друзья</span>
+                  <span>Друзі</span>
                 </label>
               </p>
               <p>
                 <label>
                   <input type="checkbox" name="how__know" value="other" />
-                  <span>Другое</span>
+                  <span>Інше</span>
                 </label>
               </p>
-              <div class="row">
+              <!-- <div class="row">
                 <div class="input-field col s12">
                   <input id="your__variant2" type="text" class="validate">
                   <label for="your__variant2">Ваш вариант</label>
                 </div>
-              </div>
+              </div> -->
             </fieldset>
 
             <fieldset>
-              <legend>Где то участвовали/тренировались ранее?</legend>
+              <legend>Десь грали раніше?</legend>
               <div class="row">
                 <div class="input-field col s12">
                   <input id="experience2" type="text" class="validate">
-                  <label for="experience2">Ваш ответ</label>
+                  <label for="experience2">Ваша відповідь</label>
                 </div>
               </div>
             </fieldset>
@@ -435,15 +436,15 @@
               <div class="row">
                 <div class="input-field col s12">
                   <input id="name2" type="text">
-                  <label for="name2" class="colored">Имя</label>
+                  <label for="name2" class="colored">Ім'я</label>
                 </div>
                 <div class="input-field col s12">
                   <input id="phone2" type="tel">
-                  <label for="phone2" class="colored">Номер телефона</label>
+                  <label for="phone2" class="colored">Номер телефону</label>
                 </div>
               </div>
             </fieldset>
-            <input class="btn btn__custom btn__custom--green" type="submit" value="Найти команду">
+            <input class="btn btn__custom btn__custom--green" type="submit" value="Заявити команду">
           </form>
         </div>
       </div>
@@ -460,7 +461,7 @@
         <div class="col s12 modal__tabs-wrap">
           <ul class="tabs">
             <li class="tab col s12">
-              <a class="active" href="#list3">Открыть лигу</a>
+              <a class="active" href="#list3">Відкрити лігу</a>
             </li>
           </ul>
         </div>
@@ -468,36 +469,36 @@
           <form class="modal-form">
             <div class="input-field col s12">
               <select>
-                <option value="" disabled selected>Выберите город</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option value="" disabled selected>Оберіть місто</option>
+                <option value="1">Київ</option>
+                <option value="2">Суми</option>
+                <option value="3">Ірпень</option>
               </select>
             </div>
             <div class="row">
               <div class="input-field col s12">
                 <input id="name3" type="text">
-                <label for="name3" class="colored">Имя</label>
+                <label for="name3" class="colored">Ім'я</label>
               </div>
               <div class="input-field col s12">
                 <input id="phone3" type="tel">
-                <label for="phone3" class="colored">Номер телефона</label>
+                <label for="phone3" class="colored">Номер телефону</label>
               </div>
               <div class="input-field col s12">
                 <input id="age3" type="number">
-                <label for="age3" class="colored">Возраст</label>
+                <label for="age3" class="colored">Вік</label>
               </div>
             </div>
             <fieldset>
-              <legend> Организаторский опыт был, если да, то какой?</legend>
+              <legend>Наявність організаторського досвіду</legend>
               <div class="row">
                 <div class="input-field col s12">
                   <input id="experience3" type="text" class="validate">
-                  <label for="experience3">Ваш ответ</label>
+                  <label for="experience3">Ваша відповідь</label>
                 </div>
               </div>
             </fieldset>
-            <input class="btn btn__custom btn__custom--green" type="submit" value="Найти команду">
+            <input class="btn btn__custom btn__custom--green" type="submit" value="Відкрити лігу">
           </form>
         </div>
       </div>
