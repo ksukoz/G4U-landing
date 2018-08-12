@@ -28,6 +28,13 @@
       text-align: center; //8px
     }
 
+    &--phone {
+      text-align: right;
+      @include respond(phone) {
+        text-align: center; //8px
+      }
+    }
+
     .row {
       margin-bottom: 0;
     }

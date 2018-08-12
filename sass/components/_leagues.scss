@@ -3,6 +3,10 @@
     display: flex;
     min-height: 100vh;
     overflow: hidden;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__panel {
@@ -21,11 +25,26 @@
       position: center;
     }
 
+    @include respond(phone) {
+      height: max-content;
+    }
+
     &.open {
       flex: 5;
 
       & .leagues__heading-text {
         display: none;
+
+        @include respond(phone) {
+          display: block;
+        }
+      }
+    }
+
+    .heading-secondary {
+      @include respond(phone) {
+        text-align: center;
+        width: 100%;
       }
     }
 
@@ -34,6 +53,9 @@
 
       & .leagues__panel-text {
         transform: translateX(-100%);
+        @include respond(phone) {
+          transform: translateX(0%);
+        }
       }
 
       &.open .leagues__panel-text {
@@ -45,6 +67,9 @@
 
       & .leagues__panel-text {
         transform: translateX(100%);
+        @include respond(phone) {
+          transform: translateX(0%);
+        }
       }
 
       &.open .leagues__panel-text {
@@ -64,7 +89,7 @@
 
     &-text {
       flex-wrap: wrap;
-      text-align-last: left;
+      text-align: left;
       padding: 0 5rem;
       transition: 1s;
 
@@ -100,19 +125,38 @@
       font-size: 2.4rem;
       width: 40%;
       text-align: right;
+
+      @include respond(phone) {
+        text-align: center;
+        width: 60%;
+      }
     }
 
     &--left {
       align-items: flex-end;
       padding-right: 8rem;
+
+      @include respond(phone) {
+        align-items: center;
+        padding-right: 0;
+      }
     }
 
     &--right {
       align-items: flex-start;
       padding-left: 8rem;
 
+      @include respond(phone) {
+        align-items: center;
+        padding-left: 0;
+      }
+
       & .leagues__heading-text {
         text-align: left;
+
+        @include respond(phone) {
+          text-align: center;
+        }
       }
     }
   }

@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function toggleOpen() {
     this.classList.toggle("open");
-    this.classList.contains("open")
+    this.classList.contains("open") && window.innerWidth > 600
       ? panels.forEach(panel => {
           panel.querySelector(".leagues__heading-text").style.display = "none";
         })
