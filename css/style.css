@@ -38,6 +38,9 @@ body {
   display: flex;
   min-height: 100vh;
   overflow: hidden; }
+  @media (max-width: 37.5em) {
+    .leagues__panels-wrap {
+      flex-direction: column; } }
 
 .leagues__panel {
   cursor: pointer;
@@ -51,20 +54,36 @@ body {
   align-items: center;
   background-size: cover;
   background-position: center; }
+  @media (max-width: 37.5em) {
+    .leagues__panel {
+      height: max-content; } }
   .leagues__panel.open {
     flex: 5; }
     .leagues__panel.open .leagues__heading-text {
       display: none; }
+      @media (max-width: 37.5em) {
+        .leagues__panel.open .leagues__heading-text {
+          display: block; } }
+  @media (max-width: 37.5em) {
+    .leagues__panel .heading-secondary {
+      text-align: center;
+      width: 100%; } }
   .leagues__panel--1 {
     background-image: url(../img/panel--1.png); }
     .leagues__panel--1 .leagues__panel-text {
       transform: translateX(-100%); }
+      @media (max-width: 37.5em) {
+        .leagues__panel--1 .leagues__panel-text {
+          transform: translateX(0%); } }
     .leagues__panel--1.open .leagues__panel-text {
       transform: translateX(0%); }
   .leagues__panel--2 {
     background-image: url(../img/panel--2.png); }
     .leagues__panel--2 .leagues__panel-text {
       transform: translateX(100%); }
+      @media (max-width: 37.5em) {
+        .leagues__panel--2 .leagues__panel-text {
+          transform: translateX(0%); } }
     .leagues__panel--2.open .leagues__panel-text {
       transform: translateX(0%); }
   .leagues__panel > * {
@@ -76,7 +95,7 @@ body {
     justify-content: center; }
   .leagues__panel-text {
     flex-wrap: wrap;
-    text-align-last: left;
+    text-align: left;
     padding: 0 5rem;
     transition: 1s; }
     .leagues__panel-text p {
@@ -101,14 +120,29 @@ body {
     font-size: 2.4rem;
     width: 40%;
     text-align: right; }
+    @media (max-width: 37.5em) {
+      .leagues__heading-text {
+        text-align: center;
+        width: 60%; } }
   .leagues__heading--left {
     align-items: flex-end;
     padding-right: 8rem; }
+    @media (max-width: 37.5em) {
+      .leagues__heading--left {
+        align-items: center;
+        padding-right: 0; } }
   .leagues__heading--right {
     align-items: flex-start;
     padding-left: 8rem; }
+    @media (max-width: 37.5em) {
+      .leagues__heading--right {
+        align-items: center;
+        padding-left: 0; } }
     .leagues__heading--right .leagues__heading-text {
       text-align: left; }
+      @media (max-width: 37.5em) {
+        .leagues__heading--right .leagues__heading-text {
+          text-align: center; } }
 
 .leagues__check {
   position: relative;
@@ -235,6 +269,9 @@ body {
   background-color: transparent;
   width: 70%;
   box-shadow: none; }
+  @media (max-width: 37.5em) {
+    .modal {
+      width: 100%; } }
   .modal#modal2 .modal-content > .row {
     margin-bottom: 0; }
   .modal .modal-content {
@@ -246,6 +283,8 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: transparent; }
+    .modal .modal-content .row {
+      margin-bottom: 0; }
     .modal .modal-content::-webkit-scrollbar {
       width: 6px;
       background-color: #339933; }
@@ -276,6 +315,9 @@ body {
     position: absolute;
     right: 2rem;
     z-index: 1005; }
+    @media (max-width: 37.5em) {
+      .modal .modal-close {
+        display: none; } }
 
 .forms {
   font-size: 3rem;
@@ -314,6 +356,9 @@ body {
       background-color: rgba(0, 0, 0, 0.4); }
   .navigation .brand-logo img {
     width: 79px; }
+    @media (max-width: 56.25em) {
+      .navigation .brand-logo img {
+        width: 60px; } }
 
 .main-footer {
   color: #fff;
@@ -337,6 +382,11 @@ body {
     @media (max-width: 75em) {
       .main-footer__contacts {
         text-align: center; } }
+    .main-footer__contacts--phone {
+      text-align: right; }
+      @media (max-width: 37.5em) {
+        .main-footer__contacts--phone {
+          text-align: center; } }
     .main-footer__contacts .row {
       margin-bottom: 0; }
     .main-footer__contacts a {

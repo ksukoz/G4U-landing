@@ -20,6 +20,10 @@
   .brand-logo {
     img {
       width: 79px;
+
+      @include respond(tab-port) {
+        width: 60px;
+      }
     }
   }
 }
